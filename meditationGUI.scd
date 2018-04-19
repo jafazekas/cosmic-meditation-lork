@@ -18,13 +18,21 @@ w = Window.new("Cosmic Meditation", Rect(500, 500, 500, 70)).layout_(
 // bee swarm
 a.action = { |a|
 	if (a.value == 0) {x.free; };
-	if (a.value == 1) {x = ~thx.play; };
+	if (a.value == 1) {x = ~thx.play;
+		AppClock.sched(26.0,{
+			a.valueAction = 0;
+		});
+	};
 };
 
 // low bee swarm
 f.action = { |f|
 	if (f.value == 0) {x.free; };
-	if (f.value == 1) {x = ~thx2.play; };
+	if (f.value == 1) {x = ~thx2.play;
+		AppClock.sched(26.0,{
+			f.valueAction = 0;
+		});
+	};
 };
 
 // all bells

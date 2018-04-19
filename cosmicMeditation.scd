@@ -9,7 +9,6 @@
 "Initializing".postln;
 "...".postln;
 
-// uncomment and load this if your computer does not have enough memory allocated to the server
 "meditationMemory.scd".loadRelative;
 
 "meditationBees.scd".loadRelative;
